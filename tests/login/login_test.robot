@@ -9,6 +9,7 @@ Library     ../../libraries/form_functions.py
 Resource    ../../data/credential_user.robot
 Resource    ../../data/platform_urls.robot
 Resource    ../../resources/common_web.resource
+Resource    ../../resources/home/home_page.resource
 Resource    ../../resources/login/login_page.resource
 
 Test Setup       Begin Web Test    ${TEST_DATA_PATH}
@@ -194,3 +195,5 @@ LOG_09 - Verify that the Chilango logo button works
     login_page.Load Chilango Login Page
     common_web.Get evidence
     login_page.Click On Chilango Logo
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
