@@ -15,6 +15,7 @@ home_locators:
   search_textbox:                  xpath=//input[@id='searchInput']
   buscar_button:                   xpath=//button[@type='submit' and contains(.,'Buscar')]
   close_search_button:             xpath=//div[@id='search']//button[@type='button']
+  banner_button:                   xpath=//a[normalize-space(text())='12 EXPERIENCIAS PARA REGALAR EN 2025']
 
   #Radio Chilango Page
   popup_publish:                  xpath=//div[@class='contentModalOlallo']

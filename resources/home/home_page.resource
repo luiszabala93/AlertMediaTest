@@ -21,6 +21,14 @@ Load Home Chilango Page
     Wait Until Element Is Visible    ${home_locators.newsletter_button}          ${TIME}
     Wait Until Element Is Visible    ${home_locators.search_button}              ${TIME}
 
+Click On Icon Close Button
+    Wait Until Element Is Visible    ${home_locators.icon_close_button}          ${TIME}
+    Click Element                    ${home_locators.icon_close_button}
+
+Verify That the Banner Has Disappeared
+    Wait Until Element Is Not Visible    ${home_locators.icon_close_button}      ${TIME}
+    Wait Until Element Is Not Visible    ${home_locators.banner_button}          ${TIME}
+
 Click On Search Button
     Wait Until Element Is Visible    ${home_locators.search_button}              ${TIME}
     Click Element                    ${home_locators.search_button}

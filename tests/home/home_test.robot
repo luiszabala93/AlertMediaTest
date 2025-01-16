@@ -96,3 +96,16 @@ HOM_05 - Verify that a user is subscribed to the newsletter
     home_page.Click On Suscribirme Button from Newsletter Page
     home_page.Verify that a user is already subscribed to the newsletter
     common_web.Get evidence
+
+HOM_06 - Verify that when user closes the banner it disappears
+    [Documentation]    Positive Test Case:
+    ...    This test case validates that when the user closes the banner,
+    ...    it disappears from the home page
+    ...    Expected Result: Banner is not displayed
+    [Tags]    HOM    HOM_06    Regression    Smoke    UI
+    ${USER_LOG} =     Collections.Get From Dictionary    ${USER}    ${ENVIRONMENT}
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
+    home_page.Click On Icon Close Button
+    home_page.Verify That the Banner Has Disappeared
+    common_web.Get evidence
