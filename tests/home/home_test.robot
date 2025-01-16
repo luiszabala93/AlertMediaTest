@@ -58,3 +58,25 @@ HOM_03 - Verify that the Newsletter Button is Working
     home_page.Click On Newsletter Button
     home_page.Load Newsletter Chilango Page
     common_web.Get evidence
+
+HOM_04 - Verify that user can subscribe to the newsletter
+    [Documentation]    Positive Test Case:
+    ...    This test case validates that the user can subscribe to the
+    ...    Chilango newsletter
+    ...    Expected Result: A confirmation page is displayed
+    [Tags]    HOM    HOM_04    Regression    Smoke    UI
+    ${NAME} =         form_functions.Generate Random Name
+    ${LAST_NAME} =    form_functions.Generate Random Last Name
+    ${USER_LOG} =     form_functions.Generate Random Email    ${NAME}    ${LAST_NAME}
+    home_page.Load Home Chilango Page
+    home_page.Click On Newsletter Button
+    home_page.Load Newsletter Chilango Page
+    common_web.Get evidence
+    home_page.Fill Email Input Text from Newsletter Page    ${USER_LOG}
+    common_web.Get evidence
+    home_page.Click On Suscribirme Button from Newsletter Page
+    home_page.Load Newsletter Subscribe Chilango Page
+    common_web.Get evidence
+    home_page.Click On Save Preferences Button from Newsletter Page
+    home_page.Verify That User Is Subscribed to the Newsletter
+    common_web.Get evidence
