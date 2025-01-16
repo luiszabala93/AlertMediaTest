@@ -135,12 +135,12 @@ Click On Pause Music from Radio Chilango
     Click Element                    ${home_locators.rc_pause_button}
     Wait Until Element Is Visible    ${home_locators.rc_play_button}             ${TIME}
 
-Close Play Music from Radio Chilango
+Close RC Player Music from Radio Chilango
     Wait Until Element Is Visible    ${home_locators.rc_player_close_button}     ${TIME}
     Click Element                    ${home_locators.rc_player_close_button}
     Wait Until Element Is Visible    ${home_locators.rc_player_button_visible}    ${TIME}
 
-Show Play Music from Radio Chilango
+Open RC Player Music from Radio Chilango
     Wait Until Element Is Visible    ${home_locators.rc_player_button_visible}    ${TIME}
     Click Element                    ${home_locators.rc_player_button_visible}
     Wait Until Element Is Visible    ${home_locators.rc_player_close_button}     ${TIME}

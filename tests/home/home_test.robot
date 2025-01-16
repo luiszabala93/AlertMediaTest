@@ -138,3 +138,17 @@ HOM_08 - Verify that when user closes the banner from radio Chilango it disappea
     home_page.Click On Popup Close Button from Radio Chilango
     home_page.Verify That the Popup Has Disappeared
     common_web.Get evidence
+
+HOM_09 - Verify that RC Player can be compressed and expanded
+    [Documentation]    Positive Test Case:
+    ...    This test case validates that when the user clicks on the button
+    ...    to compress the RC Player, it is compressed
+    ...    After this, user can expand it by clicking on the RC Player button
+    ...    Expected Result: RC Player is compressed and expanded
+    [Tags]    HOM    HOM_09    Regression    Smoke    UI
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
+    home_page.Close RC Player Music from Radio Chilango
+    common_web.Get evidence
+    home_page.Open RC Player Music from Radio Chilango
+    common_web.Get evidence
