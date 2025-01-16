@@ -5,6 +5,7 @@ PyMuPDF
 pypdf
 PyYAML
 robotframework
+robotframework-pabot
 robotframework-selenium2library
 robotframework-seleniumlibrary
 selenium
