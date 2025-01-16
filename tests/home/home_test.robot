@@ -47,3 +47,14 @@ HOM_02 - Verify that the home page loads correctly
     home_page.Load Home Chilango Page
     common_web.Get evidence
 
+HOM_03 - Verify that the Newsletter Button is Working
+    [Documentation]    Positive Test Case:
+    ...    This test case validates that when the user clicks on the NEWSLETTER button
+    ...    the page is redirected to the newsletter page of the Chilango site
+    ...    Expected Result: The newsletter page is loading correctly
+    [Tags]    HOM    HOM_03    Regression    Smoke    Sanity    UI
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
+    home_page.Click On Newsletter Button
+    home_page.Load Newsletter Chilango Page
+    common_web.Get evidence
