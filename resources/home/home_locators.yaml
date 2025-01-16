@@ -32,3 +32,5 @@ home_locators:
   thanks_newsletter_label:        xpath=//h1[contains(.,'¡Gracias!')]
   thanks_newsletter_message:      xpath=//p[contains(.,'Tus preferencias han sido modificadas, recibe tus novedades en el newsletter próximamente.')]
   back_home_button:               xpath=//a[normalize-space(text())='Ve a la página principal']
+  subscribed_newsletter_title:    xpath=//h1[contains(.,'Ya estas registrado')]
+  edit_newsletter_button:         xpath=//p[normalize-space(text())='Para editar tus preferencias revisa el correo que te hemos enviado.']

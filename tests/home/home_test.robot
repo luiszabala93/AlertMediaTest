@@ -80,3 +80,19 @@ HOM_04 - Verify that user can subscribe to the newsletter
     home_page.Click On Save Preferences Button from Newsletter Page
     home_page.Verify That User Is Subscribed to the Newsletter
     common_web.Get evidence
+
+HOM_05 - Verify that a user is subscribed to the newsletter
+    [Documentation]    Positive Test Case:
+    ...    This test case validates that the user is already subscribed to the 
+    ...    Chilango newsletter
+    ...    Expected Result: A confirmation page is displayed
+    [Tags]    HOM    HOM_05    Regression    Smoke    UI
+    ${USER_LOG} =     Collections.Get From Dictionary    ${USER}    ${ENVIRONMENT}
+    home_page.Load Home Chilango Page
+    home_page.Click On Newsletter Button
+    home_page.Load Newsletter Chilango Page
+    common_web.Get evidence
+    home_page.Fill Email Input Text from Newsletter Page    ${USER_LOG}
+    home_page.Click On Suscribirme Button from Newsletter Page
+    home_page.Verify that a user is already subscribed to the newsletter
+    common_web.Get evidence

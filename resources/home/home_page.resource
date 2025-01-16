@@ -84,6 +84,12 @@ Verify That User Is Subscribed to the Newsletter
     Wait Until Element Is Visible    ${home_locators.thanks_newsletter_message}    ${TIME}
     Wait Until Element Is Visible    ${home_locators.back_home_button}           ${TIME}
 
+Verify that a user is already subscribed to the newsletter
+    Wait For Condition               return document.readyState == "complete"    ${TIME}
+    Wait Until Element Is Visible    ${home_locators.subscribed_newsletter_title}    ${TIME}
+    Wait Until Element Is Visible    ${home_locators.edit_newsletter_button}     ${TIME}
+    Wait Until Element Is Visible    ${home_locators.back_home_button}           ${TIME}
+
 Click On Back Home Button from Newsletter Page
     Wait Until Element Is Visible    ${home_locators.back_home_button}           ${TIME}
     Click Element                    ${home_locators.back_home_button}
