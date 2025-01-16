@@ -24,4 +24,21 @@ pip install -r requirements.txt
 After installing the libraries, copy the "fitz" folder located in the "resources" folder and replace it in the "venv/Lib/site-packages" location
 
 ## Test Suite
-In the tests folder there are different automated test cases, the login/login_test.robot file contains different automated test cases referring to the login page of the Chilango site (https://login.chilango.com), the ####### file contains different automated test cases referring to the home page of the Chilango site (https://www.chilango.com)
+In the tests folder there are different automated test cases, the login/login_test.robot file contains different automated test cases referring to the login page of the Chilango site (https://login.chilango.com), the home/home_test.robot file contains different automated test cases referring to the home page of the Chilango site (https://www.chilango.com)
+
+To run automated login tests from Chrome without generating a report, you can use:
+```bash
+robot -d results -i LOG -v ENVIRONMENT:PROD -v REPORT:FALSE -v BROWSER:chrome .
+```
+
+If you want to use another browser, for example Edge, you just have to change:
+```bash
+robot -d results -i LOG -v ENVIRONMENT:PROD -v REPORT:FALSE -v BROWSER:edge .
+```
+
+If you want to run only one specific test and generate the pdf report, you can use:
+```bash
+robot -d results -i LOG_06 -v ENVIRONMENT:PROD -v REPORT:TRUE -v BROWSER:chrome .
+```
+
+The generated report will be saved in results/test_cases_evidence/PROD/login
