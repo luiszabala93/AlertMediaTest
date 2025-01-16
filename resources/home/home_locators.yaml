@@ -1,3 +1,34 @@
 home_locators:
   #Home main page
-  
+  icon_close_button:               xpath=//img[@alt='Icon Close']
+  rc_player_button:                xpath=//div[@class='RC-MainPlayer']/div[@class='RC-Player']
+  rc_player_button_hidden:         xpath=//div[@class='RC-MainPlayer']/div[@class='RC-Player hidden']
+  rc_player_button_visible:        xpath=//div[@class='RC-MainPlayer']/div[@class='RC-Icon']
+  rc_player_close_button:          xpath=//div[@class='RC-MainPlayer']/div[@class='RC-Player']/span[@class='RC-Close']
+  rc_play_button:                  xpath=//div[@class='RC-Image']/div[@class='play']
+  rc_pause_button:                 xpath=//div[@class='RC-Image']/div[@class='play hidden']
+  radio_chilango_button:           xpath=//div[@class='playerBody']/div[@class='playerMeta']
+  inicia_sesion_button:            xpath=//a[normalize-space(text())='Inicia Sesión']
+  chilango_home_logo:              xpath=//img[@alt='Chilango - Te decimos qué hacer en la Ciudad de México']
+  newsletter_button:               xpath=//a[normalize-space(text())='NEWSLETTER']
+  search_button:                   xpath=//a[@href='#search']/img
+  search_textbox:                  xpath=//input[@id='searchInput']
+  buscar_button:                   xpath=//button[@type='submit' and contains(.,'Buscar')]
+  close_search_button:             xpath=//div[@id='search']//button[@type='button']
+
+  #Radio Chilango Page
+  popup_publish:                  xpath=//div[@class='contentModalOlallo']
+  popup_close_button:             xpath=//div[@class='contentModalOlallo']/span[@class='closeModal']
+
+  #Newsletter Page
+  chilango_newsletter_logo:       xpath=//header//img[@alt='Chilango']
+  newsletter_title:               xpath=//h1[contains(.,'Suscríbete a nuestro newsletter')]
+  email_inputtext:                xpath=//input[@name='email']
+  suscribirme_button:             xpath=//button[@type='submit' and contains(.,'SUSCRIBIRME')]
+  welcome_label:                  xpath=//h1[contains(.,'Bienvenido')]
+  data_title:                     xpath=//section//h3[contains(.,'Tus Datos')]
+  themes_title:                   xpath=//section//h3[contains(.,'Temas de interés')]
+  save_preferences_button:        xpath=//button[@type='submit' and contains(.,'Guardar preferencias')]
+  thanks_newsletter_label:        xpath=//h1[contains(.,'¡Gracias!')]
+  thanks_newsletter_message:      xpath=//p[contains(.,'Tus preferencias han sido modificadas, recibe tus novedades en el newsletter próximamente.')]
+  back_home_button:               xpath=//a[normalize-space(text())='Ve a la página principal']

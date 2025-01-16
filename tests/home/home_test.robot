@@ -9,7 +9,7 @@ Library     ../../libraries/form_functions.py
 Resource    ../../data/credential_user.robot
 Resource    ../../data/platform_urls.robot
 Resource    ../../resources/common_web.resource
-Resource    ../../resources/login/login_page.resource
+Resource    ../../resources/home/home_page.resource
 
 Test Setup       Begin Web Test    ${TEST_DATA_PATH}
 Test Teardown    End Web Test
@@ -18,3 +18,5 @@ Test Teardown    End Web Test
 ${TEST_DATA_PATH} =    home
 ${LONG_TIME} =         10s
 ${SHORT_TIME} =        1s
+
+*** Test Cases ***

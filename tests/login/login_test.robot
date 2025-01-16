@@ -182,3 +182,15 @@ LOG_08 - Verify message that the email does not exist from the forgot password p
     login_page.Click On Continue Button
     login_page.Verify message that email is not registered    ${USER_LOG}
     common_web.Get evidence
+
+LOG_09 - Verify that the Chilango logo button works
+    [Documentation]    Positive Test Case:
+    ...    This test case validates that when the user clicks on the Chilango logo,
+    ...    the page is redirected to the home page of the Chilango site
+    ...    Expected Result: The site's home page is loading correctly
+    [Tags]    LOG    LOG_09    Regression    UI
+    ${USER_LOG} =     Collections.Get From Dictionary    ${USER}    WRONG
+    ${PASS_LOG} =     Collections.Get From Dictionary    ${PASS}    ${ENVIRONMENT}
+    login_page.Load Chilango Login Page
+    common_web.Get evidence
+    login_page.Click On Chilango Logo
