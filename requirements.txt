@@ -1,0 +1,11 @@
+fpdf
+fitz
+fonttools
+PyMuPDF
+pypdf
+PyYAML
+robotframework
+robotframework-selenium2library
+robotframework-seleniumlibrary
+selenium
+unidecode

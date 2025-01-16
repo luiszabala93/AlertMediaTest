@@ -1,0 +1,14 @@
+# Specify files
+credential_past.txt
+
+# General files
+*.html
+*.xml
+*.pdf
+*.pabotsuitenames
+
+# Folders
+results/
+dmvenv/
+venv/
+libraries/__pycache__/
