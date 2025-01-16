@@ -7,6 +7,8 @@ home_locators:
   rc_player_close_button:          xpath=//div[@class='RC-MainPlayer']/div[@class='RC-Player']/span[@class='RC-Close']
   rc_play_button:                  xpath=//div[@class='RC-Image']/div[@class='play']
   rc_pause_button:                 xpath=//div[@class='RC-Image']/div[@class='play hidden']
+  rc_pause_button_css:             css=div.play
+  rc_pause_button2:                div.play
   radio_chilango_button:           xpath=//div[@class='playerBody']/div[@class='playerMeta']
   inicia_sesion_button:            xpath=//a[normalize-space(text())='Inicia Sesión']
   chilango_home_logo:              xpath=//img[@alt='Chilango - Te decimos qué hacer en la Ciudad de México']

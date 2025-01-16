@@ -1,6 +1,7 @@
 *** Settings ***
 Library      Selenium2Library
 Library      ../../libraries/create_xpath.py
+Library    XML
 Variables    ./home_locators.yaml
 
 *** Variables ***
@@ -128,12 +129,20 @@ Switch to Chilango Home Page
 Click On Play Music from Radio Chilango
     Wait Until Element Is Visible    ${home_locators.rc_play_button}             ${TIME}
     Click Element                    ${home_locators.rc_play_button}
-    Wait Until Element Is Visible    ${home_locators.rc_pause_button}            ${TIME}
+    Wait Until Page Contains Element     ${home_locators.rc_pause_button_css}    ${TIME}
 
 Click On Pause Music from Radio Chilango
-    Wait Until Element Is Visible    ${home_locators.rc_pause_button}            ${TIME}
-    Click Element                    ${home_locators.rc_pause_button}
+    Wait Until Page Contains Element     ${home_locators.rc_pause_button_css}    ${TIME}
+    Execute JavaScript               document.querySelector('${home_locators.rc_pause_button2}').click()
     Wait Until Element Is Visible    ${home_locators.rc_play_button}             ${TIME}
+
+Verify That the Play Button Has Changed to Pause
+    Wait Until Page Contains Element     ${home_locators.rc_pause_button_css}    ${TIME}
+    Wait Until Element Is Not Visible    ${home_locators.rc_play_button}         ${TIME}
+
+Verify That the Play Button Has Changed to Play
+    Wait Until Element Is Visible        ${home_locators.rc_play_button}         ${TIME}
+    Wait Until Element Is Not Visible    ${home_locators.rc_pause_button}        ${TIME}
 
 Close RC Player Music from Radio Chilango
     Wait Until Element Is Visible    ${home_locators.rc_player_close_button}     ${TIME}

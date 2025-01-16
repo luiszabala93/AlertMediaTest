@@ -152,3 +152,18 @@ HOM_09 - Verify that RC Player can be compressed and expanded
     common_web.Get evidence
     home_page.Open RC Player Music from Radio Chilango
     common_web.Get evidence
+
+HOM_10 - Verify that the user can play or pause the RC Player
+    [Documentation]    Positive Test Case:
+    ...    This test case validates that the user can play the RC player
+    ...    and then pause it
+    ...    Expected Result: Play and pause button from RC Player is working
+    [Tags]    HOM    HOM_10    Regression    Smoke    UI
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
+    home_page.Click On Play Music from Radio Chilango
+    home_page.Verify That the Play Button Has Changed to Pause
+    common_web.Get evidence
+    home_page.Click On Pause Music from Radio Chilango
+    home_page.Verify That the Play Button Has Changed to Play
+    common_web.Get evidence
