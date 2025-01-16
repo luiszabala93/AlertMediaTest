@@ -111,6 +111,12 @@ Load Radio Chilango Home Page
     Wait Until Element Is Visible    ${home_locators.popup_publish}              ${TIME}
     Wait Until Element Is Visible    ${home_locators.popup_close_button}         ${TIME}
 
+Switch to Radio Chilango Page
+    Switch Window    title=Radio Chilango
+
+Switch to Chilango Home Page
+    Switch Window    url=https://www.chilango.com/
+
 Click On Play Music from Radio Chilango
     Wait Until Element Is Visible    ${home_locators.rc_play_button}             ${TIME}
     Click Element                    ${home_locators.rc_play_button}

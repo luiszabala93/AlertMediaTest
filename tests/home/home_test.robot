@@ -109,3 +109,16 @@ HOM_06 - Verify that when user closes the banner it disappears
     home_page.Click On Icon Close Button
     home_page.Verify That the Banner Has Disappeared
     common_web.Get evidence
+
+HOM_07 - Verify that the Chilango Radio Button is Working
+    [Documentation]    Positive Test Case:
+    ...    This test case validates that when the user clicks on the radio Chilango button
+    ...    the page is redirected to the Chilango Radio page
+    ...    Expected Result: The Chilango Radio page is loading correctly
+    [Tags]    HOM    HOM_07    Regression    Smoke    Sanity    UI
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
+    home_page.Click On Radio Chilango Button
+    home_page.Switch to Radio Chilango Page
+    home_page.Load Radio Chilango Home Page
+    common_web.Get evidence
