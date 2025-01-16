@@ -10,6 +10,7 @@ Resource    ../data/platform_urls.robot
 ${BROWSER}
 ${BROWSER_NAV}
 ${ENVIRONMENT}
+${PAGE}
 ${REPORT}
 ${TEST_DATA_PATH}
 
@@ -29,7 +30,11 @@ Begin Web Test
     ELSE
         Open Browser    about:blank    ${BROWSER}    options=add_argument("--inprivate"); add_argument("--ignore-certificate-errors")
     END
-    ${URL} =    Collections.Get From Dictionary    ${CHILANGO_LOGIN}    ${ENVIRONMENT}
+    IF    "${PAGE}" == "TRUE"
+        ${URL} =    Collections.Get From Dictionary    ${CHILANGO_HOME}     ${ENVIRONMENT}
+    ELSE
+        ${URL} =    Collections.Get From Dictionary    ${CHILANGO_LOGIN}    ${ENVIRONMENT}
+    END
     Go To    ${URL}
     Maximize Browser Window
 

@@ -9,6 +9,7 @@ report_title = "Chilango Testing with Robot Framework"
 pdf_path = "path"
 
 test_class_dictionary = {
+    "HOM": "home_test.robot",
     "LOG": "login_test.robot",
 }
 
