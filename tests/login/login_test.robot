@@ -26,7 +26,7 @@ ${SHORT_TIME} =        1s
 #pabot --testlevelsplit --verbose --processes 8 -d results -i LOG -v ENVIRONMENT:PROD -v REPORT:FALSE -v BROWSER:chrome .
 
 *** Test Cases ***
-LOG_01 - Verify that the login page loads correct
+LOG_01 - Verify that the login page loads correctly
     [Documentation]    Positive Test Case:
     ...    This test case validate that the login page loads correctly
     ...    Expected Result: Chilango login page is loading correctly

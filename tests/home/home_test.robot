@@ -32,9 +32,18 @@ HOM_01 - Verify that the Inicia Sesion Button is Working
     ...    This test case validates that when the user clicks on the INICIA SESIÓN button
     ...    the page is redirected to the login page of the Chilango site
     ...    Expected Result: The login page is loading correctly
-    [Tags]    HOM    HOM_01    Regression    UI
+    [Tags]    HOM    HOM_01    Regression    Smoke    UI
     home_page.Load Home Chilango Page
     common_web.Get evidence
     home_page.Click On Inicia Sesion Button
     login_page.Load Chilango Login Page
     common_web.Get evidence
+
+HOM_02 - Verify that the home page loads correctly
+    [Documentation]    Positive Test Case:
+    ...    This test case validate that the home page loads correctly
+    ...    Expected Result: Chilango home page is loading correctly
+    [Tags]    HOM    HOM_02    Regression    Smoke    Sanity    UI
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
+
