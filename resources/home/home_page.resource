@@ -111,6 +111,14 @@ Load Radio Chilango Home Page
     Wait Until Element Is Visible    ${home_locators.popup_publish}              ${TIME}
     Wait Until Element Is Visible    ${home_locators.popup_close_button}         ${TIME}
 
+Click On Popup Close Button from Radio Chilango
+    Wait Until Element Is Visible    ${home_locators.popup_close_button}         ${TIME}
+    Click Element                    ${home_locators.popup_close_button}
+
+Verify That the Popup Has Disappeared
+    Wait Until Element Is Not Visible    ${home_locators.popup_publish}          ${TIME}
+    Wait Until Element Is Not Visible    ${home_locators.popup_close_button}     ${TIME}
+
 Switch to Radio Chilango Page
     Switch Window    title=Radio Chilango
 
