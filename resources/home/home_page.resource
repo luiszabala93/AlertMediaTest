@@ -43,6 +43,11 @@ Close Search Form
     Wait Until Element Is Visible    ${home_locators.close_search_button}        ${TIME}
     Click Element                    ${home_locators.close_search_button}
 
+Verify That Search Form Is Closed
+    Wait Until Element Is Not Visible    ${home_locators.search_textbox}         ${TIME}
+    Wait Until Element Is Not Visible    ${home_locators.buscar_button}          ${TIME}
+    Wait Until Element Is Not Visible    ${home_locators.close_search_button}    ${TIME}
+
 Click On Search Button from Search Form
     Wait Until Element Is Visible    ${home_locators.buscar_button}              ${TIME}
     Click Element                    ${home_locators.buscar_button}

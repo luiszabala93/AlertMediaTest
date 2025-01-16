@@ -186,3 +186,17 @@ HOM_11 - Verify that the user can search for something from the Chilango search 
     home_page.Verify That Search Engine Found Notes Regarding What User Is Looking    ${SEARCHING_TEXT}
     common_web.Get evidence
 
+HOM_12 - Verify that the search form can be closed
+    [Documentation]    Positive Test Case:
+    ...    This test case validates that the user can close the search form
+    ...    Expected Result: Search form is not displayed
+    [Tags]    HOM    HOM_12    Regression    UI
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
+    home_page.Click On Search Button
+    home_page.Load Search Form
+    common_web.Get evidence
+    home_page.Close Search Form
+    home_page.Verify That Search Form Is Closed
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
