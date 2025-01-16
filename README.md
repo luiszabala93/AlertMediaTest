@@ -42,3 +42,14 @@ robot -d results -i LOG_06 -v ENVIRONMENT:PROD -v REPORT:TRUE -v BROWSER:chrome 
 ```
 
 The generated report will be saved in results/test_cases_evidence/PROD/login
+
+## Parallelism with Pabot
+
+If the user wants to run test cases in parallel, pabot can be used, for this we execute the following line of code:
+```bash
+pabot --testlevelsplit --processes 4 -d results -i HOM -v ENVIRONMENT:PROD -v REPORT:FALSE -v BROWSER:chrome .
+```
+The number of test cases that you want to run in parallel is limited by the number of cores that the computer has, and can be indicated in the following section:
+```bash
+pabot --testlevelsplit --processes {number}
+```
