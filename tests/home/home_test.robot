@@ -20,6 +20,7 @@ ${TEST_DATA_PATH} =    home
 ${LONG_TIME} =         10s
 ${SHORT_TIME} =        1s
 ${PAGE} =              TRUE
+${SEARCHING_TEXT} =    Fito Páez
 
 #To run
 #robot -d results -i HOM -v ENVIRONMENT:PROD -v REPORT:FALSE -v BROWSER:chrome .
@@ -167,3 +168,21 @@ HOM_10 - Verify that the user can play or pause the RC Player
     home_page.Click On Pause Music from Radio Chilango
     home_page.Verify That the Play Button Has Changed to Play
     common_web.Get evidence
+
+HOM_11 - Verify that the user can search for something from the Chilango search engine
+    [Documentation]    Positive Test Case:
+    ...    Verify that user can search for an artist from the Chilango 
+    ...    search engine and it shows its notes regarding this artist
+    ...    Expected Result: Notes about the artist are displayed
+    [Tags]    HOM    HOM_11    Regression    Smoke    UI
+    home_page.Load Home Chilango Page
+    common_web.Get evidence
+    home_page.Click On Search Button
+    home_page.Load Search Form
+    common_web.Get evidence
+    home_page.Fill Search Textbox from Search Form    ${SEARCHING_TEXT}
+    common_web.Get evidence
+    home_page.Click On Search Button from Search Form
+    home_page.Verify That Search Engine Found Notes Regarding What User Is Looking    ${SEARCHING_TEXT}
+    common_web.Get evidence
+

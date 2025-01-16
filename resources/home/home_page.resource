@@ -47,10 +47,16 @@ Click On Search Button from Search Form
     Wait Until Element Is Visible    ${home_locators.buscar_button}              ${TIME}
     Click Element                    ${home_locators.buscar_button}
 
-Fill Search Textbox
+Fill Search Textbox from Search Form
     [Arguments]    ${search_text}
     Wait Until Element Is Visible    ${home_locators.search_textbox}             ${TIME}
     Input Text                       ${home_locators.search_textbox}             ${search_text}
+
+Verify That Search Engine Found Notes Regarding What User Is Looking
+    [Arguments]    ${search_text}
+    Wait For Condition               return document.readyState == "complete"    ${TIME}
+    ${XPATH} =    create_xpath.Obtain Xpath Note Found Title                     ${search_text}
+    Wait Until Element Is Visible    ${XPATH}
 
 Click On Newsletter Button
     Wait Until Element Is Visible    ${home_locators.newsletter_button}          ${TIME}

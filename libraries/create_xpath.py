@@ -9,3 +9,6 @@ def obtain_xpath_confirmation_sent_email_legend(email):
 
 def obtain_xpath_email_unregistered(email):
     return "//div[contains(.,'El correo " + email + " no está registrado')]"
+
+def obtain_xpath_note_found_title(search_text):
+    return "//strong[contains(.,'" + search_text + "')]"
