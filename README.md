@@ -1,6 +1,6 @@
-# Alert Media Test | Technical Interview
+# Chilango Web Page
 Test suite developed by Luis Zabala
-This repository is an automated mini test suite in RobotFramework + Selenium + Python from the Chilango news site, it was made as an exercise for a technical interview for Alert Media.
+This repository is an automated mini test suite in RobotFramework + Selenium + Python from the Chilango news site, it was made as an exercise for a POC.
 
 ## Create a virtual enviroment
 
